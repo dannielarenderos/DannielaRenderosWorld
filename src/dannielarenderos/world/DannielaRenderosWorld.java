@@ -5,17 +5,33 @@
  */
 package dannielarenderos.world;
 
+import Milicia.DirectorM;
+import Milicia.Milicia;
+import Vehiculos.DirectorV;
+import Vehiculos.Vehiculo;
+
 /**
  *
  * @author Danniela Renderos
  */
 public class DannielaRenderosWorld {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
-        // TODO code application logic here
+        DirectorV veh = new DirectorV();
+        DirectorM mil = new DirectorM();
+        Vehiculo tan = veh.getTanque("Tanque",100, 50,1);
+        Vehiculo aero = veh.getAeroplano("Aeroplano", 150, 75, 2);
+        Milicia esc = mil.getEscuadrones("Escuadrones",100,25,2);
+        Milicia esp = mil.getEspecialista("Especialista",100,50,2);
+        System.out.println(tan.toString());
+        System.out.println(aero.toString());
     }
-    
 }
+
+
+  
+ 
+
+    
+
