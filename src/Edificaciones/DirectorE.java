@@ -3,20 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Milicia;
-
+package Edificaciones;
 
 /**
  *
  * @author Danniela Renderos
  */
-public class DirectorM {
-    
-    public Milicia getMilicia(String tipo, int vida, int danio, int fase, int costo)
-    {
-        return new Milicia.Builder(tipo,vida,danio,fase, costo).build();
+public class DirectorE {
+
+    public Edificaciones getRecurso(String tipo, int vida, int fase, int costo) {
+        return new Edificaciones.Builder(tipo, vida, fase, costo).build();
     }
-    
-    
 
 }

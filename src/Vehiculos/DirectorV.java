@@ -11,14 +11,10 @@ package Vehiculos;
  */
 public class DirectorV {
     
-    public Vehiculo getTanque(String tipo, int vida, int danio, int fase)
+    public Vehiculo getVehiculo(String tipo, int vida, int danio, int fase, int costo)
     {
-        return new Vehiculo.Builder(tipo,vida,danio,fase).build();
+        return new Vehiculo.Builder(tipo,vida,danio,fase, costo).build();
     }
     
-     public Vehiculo getAeroplano(String tipo, int vida, int danio, int fase)
-    {
-        return new Vehiculo.Builder(tipo,vida,danio,fase).build();
-    }
 
 }

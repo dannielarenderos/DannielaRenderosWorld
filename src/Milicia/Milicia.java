@@ -5,7 +5,6 @@
  */
 package Milicia;
 
-
 /**
  *
  * @author Danniela Renderos
@@ -14,6 +13,7 @@ public class Milicia {
 
     private String tipo;
     private int vida;
+    private int costo;
     private int danio;
     private int fase;
 
@@ -25,6 +25,7 @@ public class Milicia {
         this.vida = b.vida;
         this.danio = b.danio;
         this.fase = b.fase;
+        this.costo = b.costo;
     }
 
     public String getTipo() {
@@ -43,13 +44,18 @@ public class Milicia {
         return fase;
     }
 
+    public int getCosto() {
+        return costo;
+    }
+
     @Override
     public String toString() {
         return "Milicia{"
-                + "vida='" + vida + '\''
+               + "vida='" + vida + '\''
                 + ", fase='" + fase + '\''
                 + ", tipo='" + tipo + '\''
-                + ", daño=" + danio
+                + ", daño='" + danio + '\''
+                + ", costo='" + costo + '\''
                 + '}';
     }
 
@@ -59,13 +65,14 @@ public class Milicia {
         private int vida;
         private int danio;
         private int fase;
+        private int costo;
 
-        public Builder(String tipo, int vida, int danio, int fase) {
+        public Builder(String tipo, int vida, int danio, int fase, int costo) {
             this.tipo = tipo;
             this.vida = vida;
             this.danio = danio;
-                        this.fase = fase;
-
+            this.fase = fase;
+            this.costo = costo;
         }
 
         public Milicia build() {

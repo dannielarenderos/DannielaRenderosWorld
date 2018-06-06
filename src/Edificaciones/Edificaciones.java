@@ -3,27 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vehiculos;
+package Edificaciones;
 
 /**
  *
  * @author Danniela Renderos
  */
-public class Vehiculo {
+public class Edificaciones {
 
     private String tipo;
     private int vida;
-    private int danio;
     private int fase;
     private int costo;
 
-    public Vehiculo() {
+    public Edificaciones() {
     }
 
-    private Vehiculo(Builder b) {
+    private Edificaciones(Builder b) {
         this.tipo = b.tipo;
         this.vida = b.vida;
-        this.danio = b.danio;
         this.fase = b.fase;
         this.costo = b.costo;
     }
@@ -36,10 +34,6 @@ public class Vehiculo {
         return vida;
     }
 
-    public int getDanio() {
-        return danio;
-    }
-
     public int getFase() {
         return fase;
     }
@@ -50,11 +44,10 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{"
-               + "vida='" + vida + '\''
+        return "Edificaciones{"
+                + "vida='" + vida + '\''
                 + ", fase='" + fase + '\''
                 + ", tipo='" + tipo + '\''
-                + ", daño='" + danio + '\''
                 + ", costo='" + costo + '\''
                 + '}';
     }
@@ -63,21 +56,18 @@ public class Vehiculo {
 
         private String tipo;
         private int vida;
-        private int danio;
         private int fase;
         private int costo;
 
-        public Builder(String tipo, int vida, int danio, int fase, int costo) {
+        public Builder(String tipo, int vida, int fase, int costo) {
             this.tipo = tipo;
             this.vida = vida;
-            this.danio = danio;
             this.fase = fase;
-            this.costo = costo;
 
         }
 
-        public Vehiculo build() {
-            return new Vehiculo(this);
+        public Edificaciones build() {
+            return new Edificaciones(this);
         }
     }
 }

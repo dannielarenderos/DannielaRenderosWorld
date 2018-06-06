@@ -5,8 +5,12 @@
  */
 package dannielarenderos.world;
 
+import Edificaciones.DirectorE;
+import Edificaciones.Edificaciones;
 import Milicia.DirectorM;
 import Milicia.Milicia;
+import Reinos.Reino;
+import Reinos.ReinoFactory;
 import Vehiculos.DirectorV;
 import Vehiculos.Vehiculo;
 
@@ -16,22 +20,29 @@ import Vehiculos.Vehiculo;
  */
 public class DannielaRenderosWorld {
 
-
     public static void main(String[] args) {
-        DirectorV veh = new DirectorV();
-        DirectorM mil = new DirectorM();
-        Vehiculo tan = veh.getTanque("Tanque",100, 50,1);
-        Vehiculo aero = veh.getAeroplano("Aeroplano", 150, 75, 2);
-        Milicia esc = mil.getEscuadrones("Escuadrones",100,25,2);
-        Milicia esp = mil.getEspecialista("Especialista",100,50,2);
-        System.out.println(tan.toString());
-        System.out.println(aero.toString());
-    }
-}
-
-
-  
- 
-
-    
-
+        
+        Reino zombie = ReinoFactory.getReino(1);
+        zombie.crear();
+    }}
+//        // create a big dog
+//        dog = DogFactory.getDog(DogType.BIG);
+//        dog.speak();
+//
+//        // create a working dog
+//        dog = DogFactory.getDog(DogType.WORKING);
+//        dog.speak();
+//    }
+//}
+//String n = rec3.getTipo();
+//        System.out.println(n);
+//                System.out.println(rec3.getFase());
+//        System.out.println(n);
+//
+//        System.out.println(tan.toString());
+//        System.out.println(aero.toString());
+//        System.out.println(esc.toString());
+//        System.out.println(esp.toString());
+//        System.out.println(rec1.toString());
+//        System.out.println(rec2.toString());
+//        System.out.println(rec3.toString());

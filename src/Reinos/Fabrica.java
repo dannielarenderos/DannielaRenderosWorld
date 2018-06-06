@@ -3,20 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Milicia;
-
+package Reinos;
 
 /**
  *
  * @author Danniela Renderos
  */
-public class DirectorM {
+public interface Fabrica {
     
-    public Milicia getMilicia(String tipo, int vida, int danio, int fase, int costo)
-    {
-        return new Milicia.Builder(tipo,vida,danio,fase, costo).build();
-    }
-    
-    
+    Reino getReino(int opc);
 
 }
