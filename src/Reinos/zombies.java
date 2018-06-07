@@ -5,8 +5,12 @@
  */
 package Reinos;
 
+import CentroMando.CentroMando;
+import CentroMando.DirectorC;
 import Edificaciones.DirectorE;
 import Milicia.DirectorM;
+import Recursos.DirectorR;
+import Recursos.Recursos;
 import Vehiculos.DirectorV;
 import Vehiculos.Vehiculo;
 
@@ -21,9 +25,26 @@ public class zombies implements Reino {
         DirectorV veh = new DirectorV();
         DirectorM mil = new DirectorM();
         DirectorE edi = new DirectorE();
-        Vehiculo tan = veh.getVehiculo("Tanque", 100, 50, 1, 200);
-        System.out.println(tan.toString());
+        DirectorC cen = new DirectorC();
+         DirectorR rec = new DirectorR();
+
+        CentroMando centro = cen.getCentro(200);
+        Recursos r1 = rec.getRecurso("oro", 100, 2, 0);
+        Recursos r2 = rec.getRecurso("plata", 100, 2, 0);
+        Recursos r3 = rec.getRecurso("energía hidraulica", 100, 2, 0);
+
+        System.out.println("INFORMACIÓN RAZA JUGADOR ");
+        System.out.println();
+        System.out.println(centro.toString());
+        System.out.println(r1.toString());
+        System.out.println(r2.toString());
+        System.out.println(r3.toString());
+        System.out.println();
+        
+        
 
     }
-
+    
+     
+    
 }

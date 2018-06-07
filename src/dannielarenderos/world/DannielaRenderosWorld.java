@@ -13,6 +13,7 @@ import Reinos.Reino;
 import Reinos.ReinoFactory;
 import Vehiculos.DirectorV;
 import Vehiculos.Vehiculo;
+import java.util.Scanner;
 
 /**
  *
@@ -20,29 +21,46 @@ import Vehiculos.Vehiculo;
  */
 public class DannielaRenderosWorld {
 
+   
+    
+ public static void Menu() {
+        System.out.println("1. CREAR EDIFICACIONES ");
+        System.out.println("2. CREAR MILICIA ");
+        System.out.println("3. CREAR VEHÍCULOS ");
+        System.out.println("4. ATACAR ");
+        System.out.println("5. SALIR");
+    }
+     
     public static void main(String[] args) {
-        
-        Reino zombie = ReinoFactory.getReino(1);
-        zombie.crear();
-    }}
-//        // create a big dog
-//        dog = DogFactory.getDog(DogType.BIG);
-//        dog.speak();
-//
-//        // create a working dog
-//        dog = DogFactory.getDog(DogType.WORKING);
-//        dog.speak();
-//    }
-//}
-//String n = rec3.getTipo();
-//        System.out.println(n);
-//                System.out.println(rec3.getFase());
-//        System.out.println(n);
-//
-//        System.out.println(tan.toString());
-//        System.out.println(aero.toString());
-//        System.out.println(esc.toString());
-//        System.out.println(esp.toString());
-//        System.out.println(rec1.toString());
-//        System.out.println(rec2.toString());
-//        System.out.println(rec3.toString());
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println(" BIENVENIDOS A 'WORLD WAR' ");
+        System.out.println("RAZAS A ESCOGER: ");
+        System.out.println(" 1");
+        System.out.println(" 2");
+        System.out.println(" 3");
+        System.out.println(" JUGADOR 1, ELIJA UNA RAZA");
+        int j1 = leer.nextInt();
+        System.out.println(" JUGADOR 2, ELIJA UNA RAZA");
+        int j2 = leer.nextInt();
+        System.out.println();
+
+
+    System.out.println("-----  GAME TIME  -----");
+
+
+        Reino jugador1 = ReinoFactory.getReino(j1);
+        jugador1.crear();
+       
+        Menu();
+        System.out.println();
+
+        Reino jugador2 = ReinoFactory.getReino(j2);
+        jugador2.crear();
+                System.out.println();
+
+        Menu();
+    }
+    
+   
+}
