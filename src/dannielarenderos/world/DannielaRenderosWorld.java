@@ -5,14 +5,17 @@
  */
 package dannielarenderos.world;
 
-import Edificaciones.DirectorE;
-import Edificaciones.Edificaciones;
-import Milicia.DirectorM;
-import Milicia.Milicia;
-import Reinos.Reino;
-import Reinos.ReinoFactory;
-import Vehiculos.DirectorV;
-import Vehiculos.Vehiculo;
+import Directores.DirectorE;
+import Builders.Edificaciones;
+import Game.JugarJ1;
+import Directores.DirectorM;
+import Builders.Milicia;
+import Directores.DirectorV;
+import Builders.Vehiculo;
+import static Game.JugarJ1.FaseGlobal;
+import static Game.JugarJ1.faseJ1;
+import Game.JugarJ2;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -20,47 +23,42 @@ import java.util.Scanner;
  * @author Danniela Renderos
  */
 public class DannielaRenderosWorld {
+   public static boolean Juego = true;        
 
-   
-    
- public static void Menu() {
-        System.out.println("1. CREAR EDIFICACIONES ");
-        System.out.println("2. CREAR MILICIA ");
-        System.out.println("3. CREAR VEHÍCULOS ");
-        System.out.println("4. ATACAR ");
-        System.out.println("5. SALIR");
-    }
-     
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
+                System.out.println(" ELEGIR RAZA ");
+                System.out.println(" 1 SAVAGES ");
+                System.out.println(" 2 DAUNTLESS ");
+                System.out.println(" 3 REBELS");
+                                System.out.println("  ");
+                System.out.println(" JUGADOR 1, ELIJA SU RAZA");
+                    int razaJ1, razaJ2;
+                razaJ1 = leer.nextInt();
+                
+                System.out.println(" JUGADOR 2, ELIJA SU RAZA");
+                razaJ2 = leer.nextInt();
+                                                System.out.println("  ");
 
-        System.out.println(" BIENVENIDOS A 'WORLD WAR' ");
-        System.out.println("RAZAS A ESCOGER: ");
-        System.out.println(" 1");
-        System.out.println(" 2");
-        System.out.println(" 3");
-        System.out.println(" JUGADOR 1, ELIJA UNA RAZA");
-        int j1 = leer.nextInt();
-        System.out.println(" JUGADOR 2, ELIJA UNA RAZA");
-        int j2 = leer.nextInt();
-        System.out.println();
+JugarJ1 ju1= new JugarJ1();
+JugarJ2 ju2= new JugarJ2();
 
+while (Juego){
+                System.out.println(" TURNO JUGADOR 1");
+                                System.out.println("  ");
 
-    System.out.println("-----  GAME TIME  -----");
+ju1.Juego(razaJ1);
+                System.out.println(" ");
 
+                System.out.println(" TURNO JUGADOR 2");
+                                System.out.println("  ");
 
-        Reino jugador1 = ReinoFactory.getReino(j1);
-        jugador1.crear();
-       
-        Menu();
-        System.out.println();
+ju2.Juego(razaJ2);
 
-        Reino jugador2 = ReinoFactory.getReino(j2);
-        jugador2.crear();
-                System.out.println();
-
-        Menu();
-    }
-    
-   
 }
+                      
+    }
+
+    }
+
+

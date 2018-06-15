@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Milicia;
+package Directores;
+
+import Builders.Milicia;
 
 
 /**
@@ -12,9 +14,8 @@ package Milicia;
  */
 public class DirectorM {
     
-    public Milicia getMilicia(String tipo, int vida, int danio, int fase, int costo)
-    {
-        return new Milicia.Builder(tipo,vida,danio,fase, costo).build();
+    public Milicia getMilicia(String tipo, int vida, int fase, int danio, int costor1, int costor2) {
+        return new Milicia.Builder(tipo, vida,danio, fase, costor1, costor2).build();
     }
     
     

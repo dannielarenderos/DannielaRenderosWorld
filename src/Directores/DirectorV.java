@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vehiculos;
+package Directores;
+
+import Builders.Vehiculo;
 
 /**
  *
@@ -11,10 +13,8 @@ package Vehiculos;
  */
 public class DirectorV {
     
-    public Vehiculo getVehiculo(String tipo, int vida, int danio, int fase, int costo)
-    {
-        return new Vehiculo.Builder(tipo,vida,danio,fase, costo).build();
+ public Vehiculo getVehiculo(String tipo, int vida, int fase, int danio, int costor1, int costor2) {
+        return new Vehiculo.Builder(tipo, vida,danio, fase, costor1, costor2).build();
     }
-    
 
 }

@@ -3,29 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Vehiculos;
+package Builders;
 
 /**
  *
  * @author Danniela Renderos
  */
-public class Vehiculo {
+
+public class Edificaciones {
 
     private String tipo;
     private int vida;
-    private int danio;
     private int fase;
-    private int costo;
+    private int costor1;
+    private int costor2;
 
-    public Vehiculo() {
+    
+    public Edificaciones() {
     }
 
-    private Vehiculo(Builder b) {
+    private Edificaciones(Builder b) {
         this.tipo = b.tipo;
         this.vida = b.vida;
-        this.danio = b.danio;
         this.fase = b.fase;
-        this.costo = b.costo;
+        this.costor1 = b.costor1;
+        this.costor2 = b.costor2;
+
     }
 
     public String getTipo() {
@@ -36,26 +39,27 @@ public class Vehiculo {
         return vida;
     }
 
-    public int getDanio() {
-        return danio;
-    }
-
     public int getFase() {
         return fase;
     }
 
-    public int getCosto() {
-        return costo;
+    public int getCostor1() {
+        return costor1;
+    }
+
+    public int getCostor2() {
+        return costor2;
     }
 
     @Override
     public String toString() {
-        return "Vehiculo{"
-               + "vida='" + vida + '\''
+        return "Edificaciones{"
+                + "vida='" + vida + '\''
                 + ", fase='" + fase + '\''
                 + ", tipo='" + tipo + '\''
-                + ", daño='" + danio + '\''
-                + ", costo='" + costo + '\''
+                + ", costo recurso 1='" + costor1 + '\''
+                                + ", costo recurso 2='" + costor2 + '\''
+
                 + '}';
     }
 
@@ -63,21 +67,23 @@ public class Vehiculo {
 
         private String tipo;
         private int vida;
-        private int danio;
         private int fase;
-        private int costo;
+        private int costor1;
+        private int costor2;
 
-        public Builder(String tipo, int vida, int danio, int fase, int costo) {
+        public Builder(String tipo, int vida, int fase, int costor1, int costor2)
+        {
             this.tipo = tipo;
             this.vida = vida;
-            this.danio = danio;
             this.fase = fase;
-            this.costo = costo;
+            this.costor1 = costor1;
+                        this.costor2 = costor2;
+
 
         }
 
-        public Vehiculo build() {
-            return new Vehiculo(this);
+        public Edificaciones build() {
+            return new Edificaciones(this);
         }
     }
 }

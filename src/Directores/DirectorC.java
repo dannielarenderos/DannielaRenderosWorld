@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Recursos;
+package Directores;
+
+import CentroMando.CentroMando;
+
 
 /**
  *
  * @author Danniela Renderos
  */
-public class DirectorR {
+public class DirectorC {
 
-    public Recursos getRecurso(String tipo, int vida, int fase, int costo) {
-        return new Recursos.Builder(tipo, vida, fase, costo).build();
+    public CentroMando getCentro( int vida) {
+        return new CentroMando.Builder( vida).build();
     }
 
 }

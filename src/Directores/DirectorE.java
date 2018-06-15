@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Edificaciones;
+package Directores;
+
+import Builders.Edificaciones;
 
 /**
  *
@@ -11,8 +13,8 @@ package Edificaciones;
  */
 public class DirectorE {
 
-    public Edificaciones getRecurso(String tipo, int vida, int fase, int costo) {
-        return new Edificaciones.Builder(tipo, vida, fase, costo).build();
+    public Edificaciones getEdificio(String tipo, int vida, int fase, int costor1, int costor2) {
+        return new Edificaciones.Builder(tipo, vida, fase, costor1, costor2).build();
     }
 
 }
